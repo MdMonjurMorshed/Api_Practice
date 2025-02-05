@@ -1,0 +1,15 @@
+version: "3"
+
+services: 
+  
+  app:
+    container_name: "api_practice"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    env_file:
+      - .env      
